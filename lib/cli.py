@@ -117,6 +117,12 @@ def show_data(self):
     print(' ')
     if user_action == "S" or user_action == "s":
         print_suppliers(self.suppliers)
+        user_next_action = input("Type a supplier's name: ")
+        print(' ')
+        for supplier in self.suppliers:
+            if user_next_action == supplier.name:
+                print(f'Hey! Welcome to the {supplier.name}!')
+                user_next_action = input("Type L to see Location, I to see List Items: ")
     elif user_action == "R" or user_action == "r":
         print_restaurants(self.restaurants)
     elif user_action == "C" or user_action == "c":

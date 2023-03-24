@@ -26,12 +26,16 @@ class Supplier(Base):
 
     id = Column(Integer(), primary_key=True)
     name = Column(String())
+    location = Column(String())
+    item_list = Column(String())
 
     carriers = relationship('Carrier', backref=backref('supplier'))
 
     def __repr__(self):
         return f'Supplier(id={self.id}, ' + \
-            f'name={self.name})'
+            f'name={self.name}), ' + \
+            f'location={self.location}), ' + \
+            f'item_list={self.item_list}) '
 
 
 class Carrier(Base):
