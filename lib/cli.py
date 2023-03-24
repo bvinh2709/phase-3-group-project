@@ -41,7 +41,10 @@ def add_data(self):
 
     if user_action == "S" or user_action == "s":
         name = input("Type supplier name: ")
-        supplier = Supplier(name = name)
+        location = input("Type supplier location: ")
+        item_list = input("Type supplier item list: ")
+
+        supplier = Supplier(name = name, location = location, item_list = item_list)
 
         session.add(supplier)
         session.commit()
