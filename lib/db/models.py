@@ -2,6 +2,8 @@ from sqlalchemy import create_engine, func
 from sqlalchemy import ForeignKey, Column, Integer, String, DateTime
 from sqlalchemy.orm import relationship, backref
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import MetaData
+from sqlalchemy.engine.url import URL
 
 engine = create_engine('sqlite:///restaurants_library.db')
 
@@ -12,14 +14,16 @@ class Restaurant(Base):
 
     id = Column(Integer(), primary_key=True)
     name = Column(String())
-    delivered_at = Column(DateTime(), server_default=func.now())
-    updated_at = Column(DateTime(), onupdate=func.now())
+    location = Column(String())
+    cuisine = Column(String())
 
     carriers = relationship('Carrier', backref=backref('restaurant'))
 
     def __repr__(self):
         return f'Restaurant(id={self.id}, ' + \
-            f'name={self.name})'
+            f'name={self.name}), ' + \
+            f'location={self.location}), ' + \
+            f'cuisine={self.cuisine}) '
 
 class Supplier(Base):
     __tablename__ = 'suppliers'

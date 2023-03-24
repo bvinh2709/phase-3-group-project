@@ -53,7 +53,9 @@ def add_data(self):
 
     elif user_action == "R" or user_action == "r":
         name = input("Type restaurant name: ")
-        restaurant = Restaurant(name = name)
+        location = input("Type restaurant location: ")
+        cuisine = input("Type of restaurant: ")
+        restaurant = Restaurant(name = name, location=location, cuisine=cuisine)
         session.add(restaurant)
         session.commit()
 
@@ -99,7 +101,9 @@ def create_carrier(self):
     print(' ')
     print('Carrier added successfully!!')
 
-    print_carrier(carrier)
+    # print_carrier(carrier)
+
+
 
 def search_data(self):
     user_action = input("Type S to search carriers by supplier or R to search carriers by restaurant: ")
