@@ -13,7 +13,7 @@ class CLI:
 
     def start(self):
         print(' ')
-        print(f'***** Welcome To CDTV Corp., {self.name}! *****')
+        print(f'------ Welcome To CDTV Corp., {self.name}! ------')
         print(' ')
 
         exit = False
@@ -137,7 +137,7 @@ def show_data(self):
 
 def print_suppliers(suppliers):
     print(' ')
-    print('** Suppliers **')
+    print('--- Suppliers ---')
     print(' ')
 
     for index, supplier in enumerate(suppliers):
@@ -147,7 +147,7 @@ def print_suppliers(suppliers):
 
 def print_restaurants(restaurants):
     print(' ')
-    print('** Restaurants **')
+    print('--- Restaurants ---')
     print(' ')
 
     for index, restaurant in enumerate(restaurants):
@@ -157,7 +157,7 @@ def print_restaurants(restaurants):
 
 def print_carriers(carriers):
     print(' ')
-    print('** Carriers **')
+    print('--- Carriers ---')
     print(' ')
 
     for index, carrier in enumerate(carriers):

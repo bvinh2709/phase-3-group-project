@@ -4,6 +4,7 @@ from sqlalchemy.orm import relationship, backref
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import MetaData
 from sqlalchemy.engine.url import URL
+from sqlalchemy import update
 
 engine = create_engine('sqlite:///restaurants_library.db')
 
@@ -20,10 +21,10 @@ class Restaurant(Base):
     carriers = relationship('Carrier', backref=backref('restaurant'))
 
     def __repr__(self):
-        return f'Restaurant(id={self.id}, ' + \
-            f'name={self.name}), ' + \
-            f'location={self.location}), ' + \
-            f'cuisine={self.cuisine}) '
+        return f'(id={self.id}, ' + \
+            f' name = {self.name}, ' + \
+            f' location = {self.location}, ' + \
+            f' cuisine = {self.cuisine}) '
 
 class Supplier(Base):
     __tablename__ = 'suppliers'
@@ -36,10 +37,10 @@ class Supplier(Base):
     carriers = relationship('Carrier', backref=backref('supplier'))
 
     def __repr__(self):
-        return f'Supplier(id={self.id}, ' + \
-            f'name={self.name}), ' + \
-            f'location={self.location}), ' + \
-            f'item_list={self.item_list}) '
+        return f'(id={self.id}, ' + \
+            f' name = {self.name}, ' + \
+            f' location = {self.location}, ' + \
+            f' item_list = {self.item_list}) '
 
 
 class Carrier(Base):
@@ -53,10 +54,10 @@ class Carrier(Base):
     restaurant_id = Column(Integer(), ForeignKey('restaurants.id'))
 
     def __repr__(self):
-        return f'Carrier(id={self.id}, ' + \
-            f'name={self.name}), ' + \
-            f'fee={self.fee}), ' + \
-            f'phone={self.phone}), ' + \
-            f'supplier_id={self.supplier_id}) ' + \
-            f'restaurant_id={self.restaurant_id}) '
+        return f'(id={self.id}, ' + \
+            f' name = {self.name}, ' + \
+            f' fee = {self.fee}, ' + \
+            f' phone = {self.phone}, ' + \
+            f' supplier_id = {self.supplier_id}, ' + \
+            f' restaurant_id = {self.restaurant_id}) '
 
