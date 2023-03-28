@@ -13,12 +13,12 @@ class CLI:
 
     def start(self):
         print(' ')
-        print(f'------ Welcome To CDTV Corp., {self.name}! ------')
+        print(f'💥💥💥 Welcome To CDTV Corp., {self.name}! 💥💥💥')
         print(' ')
 
         exit = False
         while exit == False:
-            choice = input(f'Type "list" to see the restaurants, carriers or suppliers, type "add" to add a restaurant, carrier or supplier, type "search" to find carriers by restaurant or supplier: ')
+            choice = input(f'Type "list" to see the restaurants🍔, carriers🚙 or suppliers📝, type "add" to add a restaurant, carrier or supplier, type "search" to find carriers by restaurant or supplier: ')
             print(' ')
             if choice.lower() == "list":
                     show_data(self)
@@ -99,7 +99,7 @@ def create_carrier(self):
 
     self.carriers.append(carrier)
     print(' ')
-    print('Carrier added successfully!!')
+    print('🎉🎉Carrier added successfully!!🎉🎉')
 
     # print_carrier(carrier)
 
@@ -137,7 +137,7 @@ def show_data(self):
 
 def print_suppliers(suppliers):
     print(' ')
-    print('--- Suppliers ---')
+    print('📝📝📝Suppliers 📝📝📝')
     print(' ')
 
     for index, supplier in enumerate(suppliers):
@@ -147,7 +147,7 @@ def print_suppliers(suppliers):
 
 def print_restaurants(restaurants):
     print(' ')
-    print('--- Restaurants ---')
+    print('🍔🍔🍔 Restaurants 🍔🍔🍔')
     print(' ')
 
     for index, restaurant in enumerate(restaurants):
@@ -157,7 +157,7 @@ def print_restaurants(restaurants):
 
 def print_carriers(carriers):
     print(' ')
-    print('--- Carriers ---')
+    print('🚙🚙🚙 Carriers 🚙🚙🚙')
     print(' ')
 
     for index, carrier in enumerate(carriers):
