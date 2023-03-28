@@ -74,7 +74,7 @@ def add_data(self):
 
         create_carrier(self)
 
-def create_bottle(self):
+def create_carrier(self):
     user_supplier = input("Type the number of the supplier from the list above: ")
     user_restaurant = input("Type the number of the restaurant from the list above: ")
     name = input("What is the carrier's name?: " )
