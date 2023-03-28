@@ -1,0 +1,41 @@
+# Phase 3 Project
+
+🎉🎉🎉 Welcome! 🎉🎉🎉
+
+For our project, we created a tool for shipping services to use. Our product will help those services to link restaurants and their suppliers with the necessary deliveries.
+
+Users can input restaurants, suppliers and the carriers needed to make deliveries. A user can also input the inventories of each restaurant and supplier they add. Finally, all this information can be recalled by the program for the user to review. 
+
+User instructions:
+
+Git clone the file into your machine.
+1. run 'alembic revision --autogenerate -m'Create Database'
+2. run 'alembic upgrade head'
+3. cd into lib
+4. run 'python cli.py' to start the program
+5. type your name in when prompted to begin
+
+After you have entered your name, you will be given choices to execute
+/1️⃣: To call a list of restaurants, carriers, or suppliers:
+1. type 'list'
+2. more options will appear; type 'C' to list your carriers, 'S' to list suppliers or 'R' to list restaurants
+3. once a command has been entered, the requested data will appear
+4. you may exit the program once you are finished
+
+/2️⃣: To add a restaurant, carrier, or supplier to your database:
+1. type 'add'
+2. more options will appear as follows: type 'C' to add your carriers, 'S' to add suppliers or 'R' to add restaurants
+3. once a command has been entered, you will be asked: 'Don't see your Supplier or Restaurant?'
+4. type 'N' if you do not see the example, otherwise type 'Y' to return to the main menu 
+5. after you type 'N', you will be asked to fill in the necessary information of the restaurant, carrier, or supplier
+6. if done correctly, the prompt 'Restaurant/Carrier/Supplier added successfully!!' will appear
+7. following this, you will be given the option to exit the program. If you do not, you will be taken back to the main menu
+
+/3️⃣: To search for a restaurant, carrier, or supplier in already in your database:
+1. type 'search'
+2. more options will appear as follows: type 'S' to search carriers by supplier or 'R' to search carriers by restaurant
+3. once a command has been entered, a list should appear and you will be asked to type the number of the supplier/restaurant from that list
+4. depending on the number you input carrier(s) by supplier or restaurant will appear
+5. following this, you will be given the option to exit the program. If you do not, you will be taken back to the main menu
+
+to report any errors please contact us at 123@gmail.com
