@@ -1,8 +1,8 @@
-"""Create Table
+"""table recreated 3
 
-Revision ID: d5f13206da6e
+Revision ID: fe657c39844c
 Revises: 
-Create Date: 2023-03-24 17:50:24.839445
+Create Date: 2023-03-30 14:39:05.537807
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'd5f13206da6e'
+revision = 'fe657c39844c'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -21,8 +21,8 @@ def upgrade() -> None:
     op.create_table('restaurants',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('name', sa.String(), nullable=True),
-    sa.Column('delivered_at', sa.DateTime(), server_default=sa.text('(CURRENT_TIMESTAMP)'), nullable=True),
-    sa.Column('updated_at', sa.DateTime(), nullable=True),
+    sa.Column('location', sa.String(), nullable=True),
+    sa.Column('cuisine', sa.String(), nullable=True),
     sa.PrimaryKeyConstraint('id')
     )
     op.create_table('suppliers',
